@@ -1,0 +1,52 @@
+﻿Fortytwo v1.0: Pulsar timing/Gravitational wave analysis software.
+ 
+
+# Code analysis capabilities:
+----------------------------------
+
+In terms of common-signal(CS)/GW analyses, it only includes Bayesian GWB libraries. Specifically:
+
+- Power-law, broken power-law and free-spectrum searches for GWB, clock, dipolar signals
+- Free ORF signals
+- Model comparisons
+- phase shifts
+
+In terms of pulsar noise:
+It can simultaneously fit:
+- red noise,
+- DM noise,
+- scattering variation noise
+- ”DM events” (only hard-coded cases for J1713+0747)
+- global Efac
+
+Before CS search, the timing residuals in bat_info files are assumed to have the pulsar uncorrelated white noise (EFAC+EQUAD) already implemented. ECORR handling is available in the next version, where all three parameters are handled together in the covariance matrix.
+
+In terms of MC samplers, only PTMCMC is included.
+
+
+# Code compatibility and use:
+------------------------------------
+The code is compatible with python3.10 and 3.12.
+No installation is required. Simply copy the root directory Fortytwo in your python site-packages directory.
+
+Use the .py exe files to configure and run the analysis. See the Examples directory.
+
+In principle, on your terminal, you can run using 
+
+taskset -c 2 python3 name_of_exe_file.py
+
+taskset is convenient to use since the code uses PTMCMC which runs on a single core.
+If you run the code on a HPC system, use the queuing system to preferably submit using one core.
+
+# Code requirements:
+--------------------------
+
+python3.10+
+
+important libraries
+numpy, scipy, PTMCMCSampler, mpi4py, astropy
+
+# Notes
+----------
+
+- Do not use method=QR in v1.0! It’s not finished/tested 
