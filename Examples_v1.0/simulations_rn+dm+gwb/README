@@ -1,0 +1,14 @@
+The examples use 6 pulsars with psrlist_6.txt to run relatively fast.
+For a faster test you can use the psrlist_2.txt
+For a full analysis, use all 25 pulsars with psrlist_25.txt
+Otherwise, play around with any pulsar combination you want.
+
+The _DE440.rn.par files contain the exact noise values injected.
+
+EFACs were created with np.random.normal(1,0.02)
+
+Remember that the pulasr EFACs are already applied on the residuals in the bat_info_DE440.txt - 
+Therefore, if global EFACs are applied in the common signal analysis, they should return distributions around 1.
+Since the injected values are close to 1 anyway, the results will differ by a rather small amount with/without fitting global efacs.
+
+Power-law GWB injected with parametrs Amp=4.5e-15, gamma=4.33

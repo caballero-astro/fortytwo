@@ -1,0 +1,9 @@
+The examples use 6 pulsars with  psrlist_6.txt to run relatively fast. 
+For a faster test you can use the psrlist_2.txt
+For a full analysis, use all 25 pulsars with psrlist_25.txt
+Otherwise, play around with any pulsar combination you want.
+
+noise_tn contains the noise parameters used in the _noise2.json files. The exact values were injected.
+EFACs were set to 1
+
+The noise values in _DE440.rn.par are not the injected ones - This is to demonstrate that these do not really affect a proper analysis with PTMCMC - they are only used for tests of the likelihood times of calculation (in function process_likelihoodTest) which may be a bit misleading when calculations are very eas due to very low noise quoted.
