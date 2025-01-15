@@ -1,4 +1,4 @@
-# fortytwo
+# FORTYTWO
 FORTYTWO: A Pulsar timing/Gravitational wave analysis software.
 (v1.0 available)
 
