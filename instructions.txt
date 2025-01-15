@@ -1,4 +1,4 @@
-﻿Fortytwo v1.0: Pulsar timing/Gravitational wave analysis software.
+﻿#Fortytwo v1.0: Pulsar timing/Gravitational wave analysis software.#
  
 
 # Code analysis capabilities:
